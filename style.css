@@ -1,0 +1,194 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap");
+
+/*mobile first*/
+body {
+    font-family: Raleway;
+    font-size: 20px;
+    margin: 0px;
+    padding: 10px;
+    background: linear-gradient(to bottom, #f9b4b4 10%,#fb869b 20%, #eb2e3d 100%) ;
+}
+
+/*Header*/
+
+.header {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo__eye {
+    order: -1;
+    width: 20px;
+    height: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: right;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+.header__views{
+    list-style: none;
+}
+
+
+
+/*body*/
+
+h1 {
+text-align: center;
+font-size: 20px;
+}
+
+#block__ {
+    background-color: blueviolet;
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+}
+
+#block__:hover {
+    background-color: aquamarine;
+}
+
+
+.content__paragraph {
+text-align: center;
+font-size: 12px;
+}
+
+#descripcion-pokemon {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#pokemon-list {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#imagen-pokemon {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/*footer*/
+
+#footer__icons {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 50px;
+    grid-row-gap: 5px;
+    list-style: none;
+}
+
+.footer__map{
+float: right;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px; 
+    color: #fff;
+    text-align: center;
+    flex-direction: column; 
+    text-align: center;
+}
+
+.footer__column {
+    flex: 1;
+    text-align: center;
+    flex: none;
+    width: 100%; 
+}
+
+.footer__icons {
+    list-style: none;
+    padding: 0;
+    width: 10px;
+    height: 10px;
+}
+
+.footer__icons li {
+    display: inline;
+    margin-right: 10px; 
+    list-style: none;
+}
+
+.footer__text {
+    font-size: 14px; 
+    color: white;
+}
+
+.footer__map {
+    border: 0;
+}
+
+
+   
+.elemento {
+    background-color: #eb2e3d;
+    text-align: center;
+}
+
+.elemento:hover {
+    background-color: white; 
+    color: black;
+}
+
+.informacion-adicional {
+    display: none;
+}
+
+.elemento.expandido .informacion-adicional {
+    display: block;
+}
+
+
+/* versión desktop */
+@media (min-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+    h1 {
+        text-align: center;
+        font-size: 40px;
+        }
+
+    .content__paragraph {
+        text-align: center;
+        font-size: 20px;
+        }
+        
+    .footer {
+        padding: 10px;
+        display: flex;
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+
+
+
