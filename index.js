@@ -43,10 +43,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // JavaScript para expandir al hacer clic
-const elementos = document.querySelectorAll('.elemento');
+const elementos = document.querySelectorAll('.element');
 
-elementos.forEach(elemento => {
-    elemento.addEventListener('click', function () {
+element.forEach(element => {
+    element.addEventListener('click', function () {
         // Agregar o quitar la clase 'expandido' al hacer clic
         this.classList.toggle('expandido');
     });

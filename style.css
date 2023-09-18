@@ -10,52 +10,6 @@ body {
     background: linear-gradient(to bottom, #f9b4b4 10%,#fb869b 20%, #eb2e3d 100%) ;
 }
 
-/*Header*/
-/*
-.header {
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo__eye {
-    order: -1;
-    width: 20px;
-    height: 20px;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: right;
-}
-
-nav ul li {
-    display: inline;
-    margin-left: 20px;
-}
-
-nav a {
-    text-decoration: none;
-    color: black;
-}
-.header__views{
-    list-style: none;
-}
-
-*/
-
-
-.menu-toggle {
-    display: none; 
-    cursor: pointer;
-}
-
-
-
-
-
 
 .bar {
     width: 25px;
@@ -65,19 +19,15 @@ nav a {
     transition: 0.4s;
 }
 
-
 .menu-active .header__views {
     display: block;
 }
 
-  
-    .menu-toggle {
+.menu-toggle {
         display: block; 
         margin-left: auto; 
         float: right;
     }
-
-    
 
     .header__views {
         display: none; 
@@ -137,7 +87,7 @@ font-size: 12px;
 }
 
 
-.elemento a {
+.element a {
     display: block; 
     margin-bottom: 10px; 
     list-style: none;
@@ -200,21 +150,21 @@ float: right;
 }
 
 
-.elemento {
+.element {
     background-color: #eb2e3d;
     text-align: center;
 }
 
-.elemento:hover {
+.element:hover {
     background-color: white; 
     color: black;
 }
 
-.informacion-adicional {
+.element__info {
     display: none;
 }
 
-.elemento.expandido .informacion-adicional {
+.element.expandido .element__info {
     display: block;
 
 }
