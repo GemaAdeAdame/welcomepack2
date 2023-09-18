@@ -9,21 +9,24 @@
 </head>
 
 <body>
+
     <header class="header">
-
-        <a href="index.html">
-            <div class="logo__eye">
-                <img src="./img/p-solid.svg" alt="Imagen">
-            </div>
-
-            <nav class="header__views">
-                <ul>
-                    <a href="#index.html" id="home-link">Home</a>
-                    <a href="#" id="list-link">Listado</a>
-                </ul>
-            </nav>
-
+        <div class="header__logo">
+            <img src="./img/p-solid.svg" alt="">
+        </div>
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav class="header__views">
+            <ul class="header__links">
+                <li><a href="index.html" id="home-link">Home</a></li>
+                <li><a href="#" id="list-link">Listado</a></li>
+            </ul>
+        </nav>
     </header>
+  
 
     <section id="content">
         <h1>Landing page</h1>
@@ -35,11 +38,13 @@
     <div class="elemento">
         <p>Más detalle</p>
         <div class="informacion-adicional">
-            <p>Listado de pokemons</p>
-            <p>PokeApi</p>
-            <p>Añadir pokemon</p>
+            <a href="#listado-pokemons">Listado de Pokemons</a>
+            <a href="#pokeapi">PokeApi</a>
+            <a href="#nuevo-pokemon">Añadir Pokemon</a>
+            
         </div>
     </div>
+
 
     <main>
         <h1 id="nombre-pokemon"></h1>

@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { numero: 4, nombre: "Charmander" },
         { numero: 1, nombre: "Limber"},
         { numero: 3, nombre: "Imposter"},
+        { numero: 101, nombre: "Dito"},
                 // Agrega más Pokémon a la lista según sea necesario
     ];
 
