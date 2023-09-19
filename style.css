@@ -1,256 +1,246 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap");
 
 /*mobile first*/
 body {
-    font-family: Raleway;
-    font-size: 20px;
-    margin: 0px;
-    padding: 10px;
-    background: linear-gradient(#fdfcfc 10%,#f6cdd4 20%, #f9ced5 20%, #eb2e3d 100%) ;
+  font-family: Raleway;
+  font-size: 20px;
+  margin: 0px;
+  padding: 10px;
+  min-height: 100vh;
+  background: linear-gradient(
+      #fdfcfc 10%,
+      #f6cdd4 20%,
+      #f9ced5 20%,
+      #eb2e3d 100%
+    )
+    no-repeat;
 }
 
-
 .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-    margin: 6px 0;
-    transition: 0.4s;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
 }
 
 .menu-active .header__views {
-    display: block;
+  display: block;
 }
 
 .menu-toggle {
-        display: block; 
-        margin-left: auto; 
-        float: right;
-    }
+  display: block;
+  margin-left: auto;
+  float: right;
+}
 
-    .header__views {
-        display: none; 
-    }
-
+.header__views {
+  display: none;
+}
 
 .header__logo {
-    order: -1;
-    width: 20px;
-    height: 20px;
-    display: inline-block;
-    margin-right: 20px;
-
+  order: -1;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-right: 20px;
 }
 
 /*body*/
 
 h1 {
-text-align: center;
-font-size: 20px;
+  text-align: center;
+  font-size: 20px;
 }
 
 #block__ {
-    background-color: blueviolet;
-    padding: 10px;
-    cursor: pointer;
-    color: white;
-    text-align: center;
+  background-color: blueviolet;
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+  text-align: center;
 }
 
 #block__:hover {
-    background-color: aquamarine;
+  background-color: aquamarine;
 }
 
-
 .content__paragraph {
-text-align: center;
-font-size: 12px;
+  text-align: center;
+  font-size: 12px;
 }
 
 #pokemon__description {
-    text-align: center;
-    align-items: center;
-    justify-content: center;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 #pokemon-list {
-    text-align: center;
-    align-items: center;
-    justify-content: center;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 #pokemon__img {
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
-
 .element a {
-    display: block; 
-    margin-bottom: 10px; 
-    list-style: none;
+  display: block;
+  margin-bottom: 10px;
+  list-style: none;
 }
 
 .button__details {
-    text-align: center;
+  text-align: center;
 }
 
 /*footer*/
 
 #footer__icons {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 50px;
-    grid-row-gap: 5px;
-    list-style: none;
-}
-
-.footer__map{
-float: right;
-}
-
-.footer {
-    display: flex;
-    justify-content: space-between;
-    padding: 9px; 
-    color: #fff;
-    text-align: center;
-    flex-direction: column; 
-    text-align: center;
-}
-
-.footer__column {
-    flex: 1;
-    text-align: center;
-    flex: none;
-    width: 100%; 
-}
-
-.footer__icons {
-    list-style: none;
-    padding: 0;
-    width: 10px;
-    height: 10px;
-}
-
-.footer__icons li {
-    display: inline;
-    margin-right: 10px; 
-    list-style: none;
-}
-
-.footer__text {
-    font-size: 14px; 
-    color: white;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 50px;
+  grid-row-gap: 5px;
+  list-style: none;
 }
 
 .footer__map {
-    border: 0;
+  float: right;
 }
 
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 9px;
+  color: #fff;
+  text-align: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer__column {
+  flex: 1;
+  text-align: center;
+  flex: none;
+  width: 100%;
+}
+
+.footer__icons {
+  list-style: none;
+  padding: 0;
+  width: 10px;
+  height: 10px;
+}
+
+.footer__icons li {
+  display: inline;
+  margin-right: 10px;
+  list-style: none;
+}
+
+.footer__text {
+  font-size: 14px;
+  color: white;
+}
+
+.footer__map {
+  border: 0;
+}
 
 .element {
-    background-color: #eb2e3d;
-    text-align: center;
+  background-color: #eb2e3d;
+  text-align: center;
 }
 
 .element:hover {
-    background-color: white; 
-    color: black;
+  background-color: white;
+  color: black;
 }
 
 .element__info {
-    display: none;
+  display: none;
 }
 
 .element.expandido .element__info {
-    display: block;
-
+  display: block;
 }
-
 
 /* versión desktop */
 @media (min-width: 768px) {
-    body {
-        font-size: 18px;
-    }
-    h1 {
-        text-align: center;
-        font-size: 40px;
-        }
+  body {
+    font-size: 18px;
+  }
+  h1 {
+    text-align: center;
+    font-size: 40px;
+  }
 
-    .content__paragraph {
-        text-align: center;
-        font-size: 20px;
-        }
+  .content__paragraph {
+    text-align: center;
+    font-size: 20px;
+  }
 
+  .footer {
+    padding: 10px;
+    display: flex;
+    padding: 20px;
+    text-align: center;
+  }
 
-    .footer {
-        padding: 10px;
-        display: flex;
-        padding: 20px;
-        text-align: center;
-    }
+  .menu-toggle {
+    display: none;
+  }
 
-    .menu-toggle {
-        display: none; 
-        
-    }
+  .header__views {
+    display: block;
+  }
 
-    .header__views {
-        display: block; 
-    }
+  .header__views ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 
-    .header__views ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
+  .header__views ul li {
+    display: inline;
+    margin-right: 20px;
+  }
 
-    .header__views ul li {
-        display: inline;
-        margin-right: 20px;
-    }
+  .header__views ul li a {
+    text-decoration: none;
+    color: #333;
+  }
 
-    .header__views ul li a {
-        text-decoration: none;
-        color: #333; 
-    }
-    
-    .header__views {
-        display: block; 
-    }
+  .header__views {
+    display: block;
+  }
 
-    .header__links {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        text-align: right; 
-    }
+  .header__links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+  }
 
-    .header__links li {
-        display: inline;
-        margin-right: 20px;
-    }
+  .header__links li {
+    display: inline;
+    margin-right: 20px;
+  }
 
-    .header__links li a {
-        text-decoration: none;
-        color: #333; 
-    }
+  .header__links li a {
+    text-decoration: none;
+    color: #333;
+  }
 
-    .header__logo {
-        width: 20px;
-        height: 20px;
-    }
+  .header__logo {
+    width: 20px;
+    height: 20px;
+  }
 }
-
-
-
-
-
-

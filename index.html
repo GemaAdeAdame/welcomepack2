@@ -1,88 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Landing page</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <header class="header">
-        <div class="header__logo">
-            <a href="./index.html">
-            <img src="./img/p-solid.svg" alt=""></a>
-        </div>
-        <div class="menu-toggle">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <nav class="header__views">
-            <ul class="header__links">
-                <li><a href="index.html" id="home-link">Home</a></li>
-                <li><a href="#" id="list-link">Listado</a></li>
-            </ul>
-        </nav>
+      <div class="header__logo">
+        <a href="#"> <img src="./img/p-solid.svg" alt="" /></a>
+      </div>
+      <div class="menu-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <nav class="header__views">
+        <ul class="header__links">
+          <li><a href="#" id="home-link">Home</a></li>
+          <li><a href="#" id="list-link">Listado</a></li>
+        </ul>
+      </nav>
     </header>
-  
 
     <section id="content">
+      <div id="homeTitle">
         <h1>Landing page</h1>
-        <p class="content__paragraph">Bienvenid@s a la Landing Page de Pokémon que os permitirá conocer más en
-            detalle<br>
-            cada uno de los Pokemons. ¿Estáis list@s? </p>
+        <p class="content__paragraph">
+          Bienvenid@s a la Landing Page de Pokémon que os permitirá conocer más
+          en detalle<br />
+          cada uno de los Pokemons. ¿Estáis list@s?
+        </p>
+      </div>
+      <div id="pokemonList" class="element__info"></div>
     </section>
 
-    <div class="element">
-        <p>Más detalle</p>
-        <div class="element__info">
-            <a href="#listado-pokemons">Listado de Pokemons</a>
-            <a href="#pokeapi">PokeApi</a>
-        </div>
-    </div>
-
-
     <main>
+      <div id="pokemonDetails">
         <h1 id="pokemon__name"></h1>
-        <img id="pokemon__img" src="" alt="">
+        <img id="pokemon__img" src="" alt="" />
         <p id="pokemon__description"></p>
-        <div class="button__details">
-        <button id="details__">Mostrar Detalles</button>
         <button id="back__">Atrás</button>
-        </div>
-        <div id="pokemon-list"></div>
-
+      </div>
     </main>
 
-
-</body>
-<footer class="footer">
-    <div class="footer__column">
+    <footer class="footer">
+      <div class="footer__column">
         <ul id="footer__icons">
-            <li><a href="https://es.linkedin.com/" target="_blank"><img src="./img/linkedin.svg" alt="icon-linkedin"
-                        width="40px"></a></li>
-            <li><a href="https://github.com/" target="_blank"><img src="./img/github (2).svg" alt="icon-github"
-                        width="40px" /></a></li>
-            <li><a href="https://codepen.io/" target="_blank"><img src="./img/codepen.svg" alt="icon-codepen"
-                        width="40px" /></a></li>
+          <li>
+            <a href="https://es.linkedin.com/" target="_blank"
+              ><img src="./img/linkedin.svg" alt="icon-linkedin" width="40px"
+            /></a>
+          </li>
+          <li>
+            <a href="https://github.com/" target="_blank"
+              ><img src="./img/github (2).svg" alt="icon-github" width="40px"
+            /></a>
+          </li>
+          <li>
+            <a href="https://codepen.io/" target="_blank"
+              ><img src="./img/codepen.svg" alt="icon-codepen" width="40px"
+            /></a>
+          </li>
         </ul>
-    </div>
-    <div class="footer__column">
+      </div>
+      <div class="footer__column">
         <p class="footer__text">Gema Adame Prudencio. Copyright Minsait</p>
-    </div>
-    <div class="footer__column">
-        <iframe class="footer__map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.8196223772197!2d-3.6250818895823937!3d40.43499285441039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422f23c86743db%3A0x8b5256137f720ffd!2sIndra!5e0!3m2!1ses!2ses!4v1694511355488!5m2!1ses!2ses"
-            width="350" height="350" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-</footer>
+      </div>
+      <div class="footer__column">
+        <iframe
+          class="footer__map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.8196223772197!2d-3.6250818895823937!3d40.43499285441039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422f23c86743db%3A0x8b5256137f720ffd!2sIndra!5e0!3m2!1ses!2ses!4v1694511355488!5m2!1ses!2ses"
+          width="350"
+          height="350"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </footer>
+  </body>
 
-<script src="./index.js"></script>
-<script src="./details.js"></script>
-<script src="./list.js"></script>
-
+  <script src="./index.js"></script>
+  <script src="./list.js"></script>
+  <script src="./details.js"></script>
 </html>
