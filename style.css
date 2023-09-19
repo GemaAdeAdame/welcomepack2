@@ -7,7 +7,7 @@ body {
     font-size: 20px;
     margin: 0px;
     padding: 10px;
-    background: linear-gradient(to bottom, #f9b4b4 10%,#fb869b 20%, #eb2e3d 100%) ;
+    background: linear-gradient(#fdfcfc 10%,#f6cdd4 20%, #f9ced5 20%, #eb2e3d 100%) ;
 }
 
 
@@ -68,7 +68,7 @@ text-align: center;
 font-size: 12px;
 }
 
-#descripcion-pokemon {
+#pokemon__description {
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -80,7 +80,7 @@ font-size: 12px;
     justify-content: center;
 }
 
-#imagen-pokemon {
+#pokemon__img {
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -91,6 +91,10 @@ font-size: 12px;
     display: block; 
     margin-bottom: 10px; 
     list-style: none;
+}
+
+.button__details {
+    text-align: center;
 }
 
 /*footer*/
@@ -113,7 +117,7 @@ float: right;
 .footer {
     display: flex;
     justify-content: space-between;
-    padding: 20px; 
+    padding: 9px; 
     color: #fff;
     text-align: center;
     flex-direction: column; 

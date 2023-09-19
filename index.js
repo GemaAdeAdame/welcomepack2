@@ -74,3 +74,54 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
+document.addEventListener("DOMContentLoaded", function () {
+  const pokemonListContainer = document.getElementById("pokemon-list");
+
+  async function obtenerListaPokemon() {
+      try {
+          const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=1000");
+          if (!response.ok) {
+              throw new Error("No se pudo obtener la lista de Pokémon.");
+          }
+
+          const data = await response.json();
+          const pokemonList = data.results;
+
+          // Agregar botón "Mostrar Detalles"
+          const mostrarDetallesButton = document.createElement("button");
+          mostrarDetallesButton.textContent = "Mostrar Detalles";
+          pokemonListContainer.appendChild(mostrarDetallesButton);
+
+          // Agregar evento clic al botón "Mostrar Detalles"
+          mostrarDetallesButton.addEventListener("click", function () {
+              mostrarBotonesPokemon(pokemonList);
+          });
+      } catch (error) {
+          console.error("Error:", error);
+      }
+  }
+
+  function mostrarBotonesPokemon(pokemonList) {
+      // Limpiar el contenido anterior
+      pokemonListContainer.innerHTML = "";
+
+      // Iterar a través de la lista de Pokémon y crear un botón para cada uno
+      pokemonList.forEach((pokemon, index) => {
+          const pokemonButton = document.createElement("button");
+          pokemonButton.textContent = `${index + 1}. ${pokemon.name}`;
+          pokemonListContainer.appendChild(pokemonButton);
+
+          // Agregar evento clic a cada botón de Pokémon
+          pokemonButton.addEventListener("click", function () {
+              alert(`Has seleccionado a ${pokemon.name}`);
+          });
+      });
+  }
+
+  obtenerListaPokemon();
+});
+
+
+
+

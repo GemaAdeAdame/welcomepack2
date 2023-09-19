@@ -12,11 +12,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const data = await response.json();
 
-            const nombrePokemon = document.getElementById("nombre-pokemon");
-            const imagenPokemon = document.getElementById("imagen-pokemon");
-            const descripcionPokemon = document.getElementById("descripcion-pokemon");
-            const mostrarDetallesButton = document.getElementById("mostrar-detalles");
-            const atrasButton = document.getElementById("atras");
+            const nombrePokemon = document.getElementById("pokemon__name");
+            const imagenPokemon = document.getElementById("pokemon__img");
+            const descripcionPokemon = document.getElementById("pokemon__description");
+            const mostrarDetallesButton = document.getElementById("details__");
+            const back__Button = document.getElementById("back__");
 
             nombrePokemon.textContent = data.name;
             imagenPokemon.src = data.sprites.front_default;
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Ocultar el botón "Mostrar Detalles" y mostrar el botón "Atrás"
             mostrarDetallesButton.style.display = "none";
-            atrasButton.style.display = "inline";
+            back__Button.style.display = "inline";
 
             detallesMostrados = true;
         } catch (error) {
@@ -32,8 +32,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    const mostrarDetallesButton = document.getElementById("mostrar-detalles");
-    const atrasButton = document.getElementById("atras");
+    const mostrarDetallesButton = document.getElementById("details__");
+    const back__Button = document.getElementById("back__");
 
     mostrarDetallesButton.addEventListener("click", function () {
         if (!detallesMostrados) {
@@ -41,13 +41,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    atrasButton.addEventListener("click", function () {
+    back__Button.addEventListener("click", function () {
         // Restablecer la vista al estado inicial
-        const nombrePokemon = document.getElementById("nombre-pokemon");
-        const imagenPokemon = document.getElementById("imagen-pokemon");
-        const descripcionPokemon = document.getElementById("descripcion-pokemon");
-        const mostrarDetallesButton = document.getElementById("mostrar-detalles");
-        const atrasButton = document.getElementById("atras");
+        const nombrePokemon = document.getElementById("pokemon__name");
+        const imagenPokemon = document.getElementById("pokemon__img");
+        const descripcionPokemon = document.getElementById("pokemon__description");
+        const mostrarDetallesButton = document.getElementById("details__");
+        const back__Button = document.getElementById("back__");
 
         nombrePokemon.textContent = "";
         imagenPokemon.src = "";
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Mostrar el botón "Mostrar Detalles" y ocultar el botón "Atrás"
         mostrarDetallesButton.style.display = "inline";
-        atrasButton.style.display = "none";
+        back__Button.style.display = "none";
 
         detallesMostrados = false;
     });

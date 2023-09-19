@@ -12,7 +12,8 @@
 
     <header class="header">
         <div class="header__logo">
-            <img src="./img/p-solid.svg" alt="">
+            <a href="./index.html">
+            <img src="./img/p-solid.svg" alt=""></a>
         </div>
         <div class="menu-toggle">
             <div class="bar"></div>
@@ -40,19 +41,18 @@
         <div class="element__info">
             <a href="#listado-pokemons">Listado de Pokemons</a>
             <a href="#pokeapi">PokeApi</a>
-            <a href="#nuevo-pokemon">Añadir Pokemon</a>
-            
         </div>
     </div>
 
 
     <main>
-        <h1 id="nombre-pokemon"></h1>
-        <img id="imagen-pokemon" src="" alt="Imagen del Pokémon">
-        <p id="descripcion-pokemon"></p>
-        <button id="mostrar-detalles">Mostrar Detalles</button>
-        <button id="atras">Atrás</button>
-
+        <h1 id="pokemon__name"></h1>
+        <img id="pokemon__img" src="" alt="">
+        <p id="pokemon__description"></p>
+        <div class="button__details">
+        <button id="details__">Mostrar Detalles</button>
+        <button id="back__">Atrás</button>
+        </div>
         <div id="pokemon-list"></div>
 
     </main>
