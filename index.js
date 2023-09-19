@@ -1,15 +1,13 @@
 //*Saludo de 2 segundos
 var timeoutID;
 
-// Función que crea el timeout
 function mostrarSaludoDentroDeDosSegundos() {
   timeoutID = setTimeout(slowAlert, 2000); 
 }
-// Función que muestra un alert
 function slowAlert() {
    alert("¡¡Bienvenid@s a nuestra página!!");
 }
-// Llamamos a la función que crea el timeout
+
 mostrarSaludoDentroDeDosSegundos();
 
 //*pokeAPI
@@ -42,12 +40,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-// JavaScript para expandir al hacer clic
+
 const element = document.querySelectorAll('.element');
 
 element.forEach(element => {
     element.addEventListener('click', function () {
-        // Agregar o quitar la clase 'expandido' al hacer clic
         this.classList.toggle('expandido');
     });
 });
@@ -88,12 +85,12 @@ document.addEventListener("DOMContentLoaded", function () {
           const data = await response.json();
           const pokemonList = data.results;
 
-          // Agregar botón "Mostrar Detalles"
+         
           const mostrarDetallesButton = document.createElement("button");
           mostrarDetallesButton.textContent = "Mostrar Detalles";
           pokemonListContainer.appendChild(mostrarDetallesButton);
 
-          // Agregar evento clic al botón "Mostrar Detalles"
+          
           mostrarDetallesButton.addEventListener("click", function () {
               mostrarBotonesPokemon(pokemonList);
           });
@@ -103,16 +100,14 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function mostrarBotonesPokemon(pokemonList) {
-      // Limpiar el contenido anterior
       pokemonListContainer.innerHTML = "";
 
-      // Iterar a través de la lista de Pokémon y crear un botón para cada uno
       pokemonList.forEach((pokemon, index) => {
           const pokemonButton = document.createElement("button");
           pokemonButton.textContent = `${index + 1}. ${pokemon.name}`;
           pokemonListContainer.appendChild(pokemonButton);
 
-          // Agregar evento clic a cada botón de Pokémon
+        
           pokemonButton.addEventListener("click", function () {
               alert(`Has seleccionado a ${pokemon.name}`);
           });
