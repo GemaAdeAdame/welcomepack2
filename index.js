@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // JavaScript para expandir al hacer clic
-const elementos = document.querySelectorAll('.element');
+const element = document.querySelectorAll('.element');
 
 element.forEach(element => {
     element.addEventListener('click', function () {
