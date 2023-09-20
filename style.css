@@ -435,5 +435,9 @@ h1 {
   align-items: center;
   width: 20%;
 }
+
+#pokemonDetails {
+  text-align: center;
+}
 }
 
