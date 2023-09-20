@@ -19,7 +19,21 @@ header {
   margin: 17px;
 }
 
+#homeTitle {
+  text-align: center;
+  animation: fadeInTitle 2s ease-in;
+}
 
+@keyframes fadeInTitle {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .logo {
   align-self: flex-start;
 }
@@ -38,6 +52,34 @@ background-color: #ff8fb1;
   height: 20px;
   display: inline-block;
   margin-right: 20px;
+}
+
+.pokemon-container {
+  position: relative;
+  width: 110px;
+  height: 90px;
+  animation: moveAndRotatePokemon 8s linear infinite;
+}
+
+@keyframes moveAndRotatePokemon {
+  0% {
+    left: 0;
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+    left: calc(50% - 50px);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    left: calc(100% - 100px);
+  }
 }
 
 /*body*/
@@ -87,16 +129,25 @@ h1 {
   font-size: 12px;
 }
 
-  .site-footer
-{
-  
+  .site-footer {
   background-color: rgba(0, 0, 0, 0.05);
   padding: 20px 23px 15px;
   font-size: 15px;
   line-height: 24px;
   color: #020202;
   margin: 10px;
+  animation: slideInFooter 5s ease-in;
 }
+
+@keyframes slideInFooter {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 
 .site-footer hr
 {
@@ -116,6 +167,7 @@ h1 {
   margin-top:5px;
   letter-spacing: 14px;
   text-align: center;
+  margin: 3px;
 }
 .site-footer a
 {
@@ -173,6 +225,7 @@ h1 {
   text-align: center;
   width: 100%;
   height: 100%;
+ 
 }
 
 .popular-tag ul li a:hover, 
@@ -180,6 +233,35 @@ h1 {
   background: red;
   border: 1px solid red;
   color: #fff;
+}
+
+.footer-icons {
+  text-align: center;
+}
+
+.footer-icons ul {
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+}
+
+.footer-icons li {
+  margin: 0 10px;
+}
+
+.footer-icons a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  margin: 5px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 20px;
+  background-color: #ffffff;
+  color: #101010;
+  text-decoration: none;
+  transition: background-color 0.3s, border 0.3s, color 0.3s;
 }
 
 
@@ -336,6 +418,13 @@ h1 {
     text-align: center;
   }
   
+.footer-icons ul {
+  flex-direction: column;
+  align-items: center;
+}
 
+.footer-icons li {
+  margin: 10px 0;
+}
 }
 
