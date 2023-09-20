@@ -16,6 +16,7 @@ body {
     no-repeat;
 }
 
+
 .bar {
   width: 25px;
   height: 3px;
@@ -23,20 +24,15 @@ body {
   margin: 6px 0;
   transition: 0.4s;
 }
-
+/*
 .menu-active .header__views {
   display: block;
 }
 
-.menu-toggle {
-  display: block;
-  margin-left: auto;
-  float: right;
-}
 
 .header__views {
   display: none;
-}
+}*/
 
 .header__logo {
   order: -1;

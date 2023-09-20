@@ -34,3 +34,16 @@ document.addEventListener("DOMContentLoaded", function () {
     back__Button.style.display = "none";
   });
 });
+
+
+// toggle menú
+const menuToggle = document.getElementById('menuToggle');
+const menut = document.getElementById('menu-toggle');
+
+menuToggle.addEventListener('click', () => {
+  menut.classList.toggle('hidden');
+});
+
+function Home() {
+  alert("Ya estas aquí");
+}
