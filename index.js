@@ -20,7 +20,8 @@ const back__Button = document.getElementById("back__");
 pokemonDetails.style.display = "none";
 back__Button.style.display = "none";
 
-document.addEventListener("DOMContentLoaded", function () {
+
+/*document.addEventListener("DOMContentLoaded", function () {
   const homeLink = document.getElementById("home-link");
 
   homeLink.addEventListener("click", function () {
@@ -32,8 +33,54 @@ document.addEventListener("DOMContentLoaded", function () {
     pokemonList.style.display = "none";
     pokemonDetails.style.display = "none";
     back__Button.style.display = "none";
+/*  });
+});*/
+/*
+document.addEventListener("DOMContentLoaded", function () {
+  const homeLink = document.getElementById("home-link");
+  const listLink = document.getElementById("list-link");
+
+  homeLink.addEventListener("click", function () {
+    homeTitle.style.display = "block";
+    pokemonList.style.display = "none";
+    pokemonDetails.style.display = "none";
+    back__Button.style.display = "none";
+    
+    alert('Ya estás en la página de Home');
+  });
+
+  listLink.addEventListener("click", function () {
+    alert('Ya estás en la página de List');
+  });
+});*/
+document.addEventListener("DOMContentLoaded", function () {
+  const homeLink = document.getElementById("home-link");
+  const listLink = document.getElementById("list-link");
+  let hasVisitedHome = false;
+  let hasVisitedList = false;
+
+  homeLink.addEventListener("click", function () {
+    homeTitle.style.display = "block";
+    pokemonList.style.display = "none";
+    pokemonDetails.style.display = "none";
+    back__Button.style.display = "none";
+    
+    if (hasVisitedHome) {
+      alert('Ya estás en la página de Home');
+    } else {
+      hasVisitedHome = true;
+    }
+  });
+
+  listLink.addEventListener("click", function () {
+    if (hasVisitedList) {
+      alert('Ya estás en la página de List');
+    } else {
+      hasVisitedList = true;
+    }
   });
 });
+
 
 
 // toggle menú
@@ -44,6 +91,28 @@ menuToggle.addEventListener('click', () => {
   menut.classList.toggle('hidden');
 });
 
-function Home() {
-  alert("Ya estas aquí");
-}
+
+
+const homeLink = document.getElementById('home-link');
+
+homeLink.addEventListener('click', () => {
+  alert('Ya estás en la página de Home');
+});
+
+
+/*alert ya estoy en home y ya estoy en listado
+  const homeLink = document.getElementById('home-link');
+  const listLink = document.getElementById('list-link');
+
+  homeLink.addEventListener('click', () => {
+    alert('Ya estás en la página de Home');
+  });
+
+  listLink.addEventListener('click', () => {
+    alert('Ya estás en la página de Listado');
+  });
+*/
+
+
+
+
