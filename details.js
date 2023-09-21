@@ -1,4 +1,3 @@
-// Obtener información de un solo pokemon via url (viene de list.js)
 const mostrarDetalles = async (url) => {
   const response = await fetch(url);
   if (!response.ok) {
@@ -21,7 +20,6 @@ const mostrarDetalles = async (url) => {
 };
 
 back__Button.addEventListener("click", function () {
-  // Volver atrás borrará la infomación del pokemon en el DOM
   const nombrePokemon = document.getElementById("pokemon__name");
   const imagenPokemon = document.getElementById("pokemon__img");
   const descripcionPokemon = document.getElementById("pokemon__description");

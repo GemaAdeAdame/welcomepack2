@@ -4,10 +4,8 @@ const apiURL = `https://pokeapi.co/api/v2/pokemon/`;
 fetch(apiURL)
 .then(response => response.json())
 .then(data => {
-    console.log(data.results);
 })
 .catch(error => {
-    console.error('error')
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -33,7 +31,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 mostrarBotonesPokemon(pokemonList);
             });
         } catch (error) {
-            console.error("Error:", error);
         }
     }
   
