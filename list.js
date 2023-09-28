@@ -1,6 +1,8 @@
 // list.js
 
-import { getPokemonList } from "./info"; // Asegúrate de que la ruta del archivo sea correcta
+// En el archivo donde importas getPokemonList
+import { getPokemonList } from "./info.js"; // Asegúrate de que la ruta sea correcta
+
 
 const apiURL = `https://pokeapi.co/api/v2/pokemon`;
 
@@ -40,3 +42,5 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
   });
 });
+
+export { pokemons };

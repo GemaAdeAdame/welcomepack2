@@ -1,5 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap");
 
+
+/* Oculta los elementos por defecto */
+#homeTitle, #pokemonList, #pokemonDetails, #back__Button {
+  display: none;
+}
+
+/* Muestra los elementos cuando se agrega la clase 'show' */
+#homeTitle.show, #pokemonList.show, #pokemonDetails.show, #back__Button.show {
+  display: block;
+}
+
 body {
   font-family: Raleway;
   font-size: 12px;
