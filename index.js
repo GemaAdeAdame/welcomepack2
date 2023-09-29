@@ -95,7 +95,3 @@ const mostrarDetalles = async (url) => {
   imagenPokemon.src = data.sprites.front_default;
   descripcionPokemon.textContent = `Altura: ${data.height} dm, Peso: ${data.weight} hg`;
 };
-
-
-
-

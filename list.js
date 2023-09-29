@@ -1,9 +1,7 @@
-
 const apiURL = `https://pokeapi.co/api/v2/pokemon`;
 
-
 const pokemons = async (limit) => {
-  const response = await fetch(apiURL + `?limit=${limit}`);
+  const response = await fetch(`${apiURL}?limit=${limit}`);
   if (!response.ok) {
     throw new Error("No se pudo obtener la lista de Pokémon.");
   }
@@ -13,7 +11,6 @@ const pokemons = async (limit) => {
 //-----------------------------------------
 const displayPokemons = async () => {
   if (!document.getElementById("pokeLista")) {
- 
     const lista = document.createElement("ul");
     lista.setAttribute("id", "pokeLista");
 
@@ -34,8 +31,3 @@ const displayPokemons = async () => {
 };
 
 export { displayPokemons };
-
-
-
-
-
