@@ -1,58 +1,27 @@
+import { displayPokemons } from "./list.js";
+
 //------------ Timeout -----------------------
-function mostrarSaludoDentroDeDosSegundos() {
+function showGrettingTwoSeconds() {
   setTimeout(slowAlert, 2000);
 }
 function slowAlert() {
   alert("¡¡Bienvenid@s a nuestra página!!");
 }
+showGrettingTwoSeconds();
 
-mostrarSaludoDentroDeDosSegundos();
-
-// ---------------------------------------------
-
-// ------ Recoger los divs del index.html ------
 const homeTitle = document.getElementById("homeTitle");
 const pokemonList = document.getElementById("pokemonList");
 const pokemonDetails = document.getElementById("pokemonDetails");
 const back__Button = document.getElementById("back__");
 
-// ---- Inicializa los detalles de pokemon ocultando ----
 pokemonDetails.style.display = "none";
 back__Button.style.display = "none";
 
+homeTitle.style.display = "block";
+pokemonList.style.display = "none";
+pokemonDetails.style.display = "none";
+back__Button.style.display = "none";
 
-/*document.addEventListener("DOMContentLoaded", function () {
-  const homeLink = document.getElementById("home-link");
-
-  homeLink.addEventListener("click", function () {
-    /* Solo se necesita mostrar el landing
-     Como podemos regresar desde otras vistas,
-     hay que asegurarse de ocultar el contenido
-     */
-    homeTitle.style.display = "block";
-    pokemonList.style.display = "none";
-    pokemonDetails.style.display = "none";
-    back__Button.style.display = "none";
-/*  });
-});*/
-/*
-document.addEventListener("DOMContentLoaded", function () {
-  const homeLink = document.getElementById("home-link");
-  const listLink = document.getElementById("list-link");
-
-  homeLink.addEventListener("click", function () {
-    homeTitle.style.display = "block";
-    pokemonList.style.display = "none";
-    pokemonDetails.style.display = "none";
-    back__Button.style.display = "none";
-    
-    alert('Ya estás en la página de Home');
-  });
-
-  listLink.addEventListener("click", function () {
-    alert('Ya estás en la página de List');
-  });
-});*/
 document.addEventListener("DOMContentLoaded", function () {
   const homeLink = document.getElementById("home-link");
   const listLink = document.getElementById("list-link");
@@ -64,54 +33,68 @@ document.addEventListener("DOMContentLoaded", function () {
     pokemonList.style.display = "none";
     pokemonDetails.style.display = "none";
     back__Button.style.display = "none";
-    
+
     if (hasVisitedHome) {
-      alert('Ya estás en la página de Home');
+      alert("Ya estás en la página de Home");
     } else {
       hasVisitedHome = true;
     }
   });
 
-  listLink.addEventListener("click", function () {
+  listLink.addEventListener("click", async () => {
     if (hasVisitedList) {
-      alert('Ya estás en la página de List');
+      alert("Ya estás en la página de List");
     } else {
       hasVisitedList = true;
+      homeTitle.style.display = "none";
+      pokemonList.style.display = "block";
+      pokemonDetails.style.display = "none";
+      back__Button.style.display = "none";
+      const lista = await displayPokemons();
+      pokemonList.appendChild(lista);
     }
   });
 });
 
+function toggleMenu() {
+  const menuToggle = document.getElementById("menuToggle");
+  const menut = document.getElementById("menu-toggle");
 
-
-// toggle menú
-const menuToggle = document.getElementById('menuToggle');
-const menut = document.getElementById('menu-toggle');
-
-menuToggle.addEventListener('click', () => {
-  menut.classList.toggle('hidden');
-});
-
-
-
-const homeLink = document.getElementById('home-link');
-
-homeLink.addEventListener('click', () => {
-  alert('Ya estás en la página de Home');
-});
-
-
-/*alert ya estoy en home y ya estoy en listado
-  const homeLink = document.getElementById('home-link');
-  const listLink = document.getElementById('list-link');
-
-  homeLink.addEventListener('click', () => {
-    alert('Ya estás en la página de Home');
+  menuToggle.addEventListener("click", () => {
+    menut.classList.toggle("hidden");
   });
+}
+toggleMenu();
 
-  listLink.addEventListener('click', () => {
-    alert('Ya estás en la página de Listado');
+function showAlertOnHomeLinkClick() {
+  const homeLink = document.getElementById("home-link");
+
+  homeLink.addEventListener("click", () => {
+    alert("Ya estás en la página de Home");
   });
-*/
+}
+showAlertOnHomeLinkClick();
+
+const mostrarDetalles = async (url) => {
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error("No se pudo obtener la información del Pokémon.");
+  }
+
+  homeTitle.style.display = "none";
+  pokemonList.style.display = "none";
+  pokemonDetails.style.display = "block";
+  back__Button.style.display = "block";
+
+  const data = await response.json();
+  const nombrePokemon = document.getElementById("pokemon__name");
+  const imagenPokemon = document.getElementById("pokemon__img");
+  const descripcionPokemon = document.getElementById("pokemon__description");
+
+  nombrePokemon.textContent = data.name;
+  imagenPokemon.src = data.sprites.front_default;
+  descripcionPokemon.textContent = `Altura: ${data.height} dm, Peso: ${data.weight} hg`;
+};
 
 
 

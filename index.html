@@ -1,124 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
-    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-    <title>Landing page</title>
 
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <script type="module" src="./index.js"></script>
+  <title>Landing page</title>
 
-  <body>
-    <header class="header">
-      <div class="header__logo">
-        <a href="index.html"> <img src="./img/p-solid.svg" alt="" /></a>
-      </div>
+</head>
 
-      <nav class="header__views">
-        <ul class="header__links">
-          <li><a href="#" id="home-link">Home</a></li>
-          <li><a href="#" id="list-link">Listado</a></li>
-        </ul>
-      </nav> 
-    </header>
-
-    <section id="content">
-      <div id="homeTitle">
-        <h1>Landing page</h1>
-        <p class="content__paragraph">
-          Bienvenid@s a la Landing Page de Pokémon que os permitirá conocer más
-          en detalle<br />
-          cada uno de los Pokemons. ¿Estáis list@s?
-        </p>
-      </div>
-      <div id="pokemonList" class="element__info"></div>
-    </section>
-
-    <div class="pokemon-container">
-      <img src="img/pokemon-1530315_1280.png" alt="pokemon ball" style="width: 100%; height: 100%;">
+<body>
+  <header class="header">
+    <div class="header__logo">
+      <a href="index.html"> <img src="./img/p-solid.svg" alt="" /></a>
     </div>
 
-    <details>
-      <summary class="content__paragraph">Más detalles</summary>
-      <ul>
-        <li>Ve a listado y pulsa en el pokemon para ver su foto, altura y peso</li>
-        <li>Regresa a Home para ver nuestras redes sociales y dónde estamos ubicados</li>
+    <nav class="header__views">
+      <ul class="header__links">
+        <li><a href="#" id="home-link">Home</a></li>
+        <li><a href="#" id="list-link">listdo</a></li>
       </ul>
-    </details>
+    </nav>
+  </header>
+
+  <section id="content">
+    <div id="homeTitle">
+      <h1>Landing page</h1>
+      <p class="content__paragraph">
+        Bienvenid@s a la Landing Page de Pokémon que os permitirá conocer más
+        en detalle<br />
+        cada uno de los Pokemons. ¿Estáis list@s?
+      </p>
+    </div>
+    <div id="pokemonList" class="element__info"></div>
+  </section>
+
+  <div class="pokemon-container">
+    <img src="img/pokemon-1530315_1280.png" alt="pokemon ball" style="width: 100%; height: 100%;">
+  </div>
+
+  <details>
+    <summary class="content__paragraph">Más detalles</summary>
+    <ul>
+      <li>Ve a listdo y pulsa en el pokemon para ver su foto, altura y peso</li>
+      <li>Regresa a Home para ver nuestras redes sociales y dónde estamos ubicados</li>
+    </ul>
+  </details>
 
 
-    <main>
-      <div id="pokemonDetails">
-        <h1 id="pokemon__name"></h1>
-        <img id="pokemon__img" src="" alt="" />
-        <p id="pokemon__description"></p>
-        <button id="back__">Atrás</button>
-      </div>
-    </main>
+  <main>
+    <div id="pokemonDetails">
+      <h1 id="pokemon__name"></h1>
+      <img id="pokemon__img" src="" alt="" />
+      <p id="pokemon__description"></p>
+      <button id="back__">Atrás</button>
+    </div>
+  </main>
 
-    <footer class="site-footer">
-      <div class="container">
-        <div class="row">
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>Sobre nosotr@s</h6>
+          <p class="text-justify">Esta landing page está pensada para mejorarse y ser ampliada a futuro. <br> Con muchas
+            ganas e ilusión de poder aprender cada día un poco más en el mundo de la programación.</p>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="http://scanfcode.com/about/">Sobre nosotr@s</a></li>
+            <li><a href="http://scanfcode.com/contact/">Contáctanos</a></li>
+            <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribuye</a></li>
+            <li><a href="http://scanfcode.com/privacy-policy/">Política de privacidad</a></li>
+          </ul>
           <div class="col-sm-12 col-md-6">
-            <h6>Sobre nosotr@s</h6>
-            <p class="text-justify">Esta landing page está pensada para mejorarse y ser ampliada a futuro. <br> Con muchas ganas e ilusión de poder aprender cada día un poco más en el mundo de la programación.</p>
-          </div>
-
-          <div class="col-xs-6 col-md-3">
-            <h6>Quick Links</h6>
-            <ul class="footer-links">
-              <li><a href="http://scanfcode.com/about/">Sobre nosotr@s</a></li>
-              <li><a href="http://scanfcode.com/contact/">Contáctanos</a></li>
-              <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribuye</a></li>
-              <li><a href="http://scanfcode.com/privacy-policy/">Política de privacidad</a></li>
-            </ul>
-            <div class="col-sm-12 col-md-6">
-              <h6>¿Dónde estamos?</h6>
-            <iframe
-            class="footer__map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.8196223772197!2d-3.6250818895823937!3d40.43499285441039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422f23c86743db%3A0x8b5256137f720ffd!2sIndra!5e0!3m2!1ses!2ses!4v1694511355488!5m2!1ses!2ses"
-            width="350"
-            height="350"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-          </div>
+            <h6>¿Dónde estamos?</h6>
+            <iframe class="footer__map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.8196223772197!2d-3.6250818895823937!3d40.43499285441039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422f23c86743db%3A0x8b5256137f720ffd!2sIndra!5e0!3m2!1ses!2ses!4v1694511355488!5m2!1ses!2ses"
+              width="350" height="350" style="border: 0" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
-        <hr>
       </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-sm-6 col-xs-12">
-            <p class="copyright-text">Copyright &copy; Gema Adame Prudencio
-         <a href="#">Minsait</a>.
-            </p>
-          </div>
-          <div class="footer-area-bottom">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="footer-icons">
-                    <ul>  
-                      <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                      <li><a href="#"><i class="fab fa-codepen"></i></a></li>
-                      <li><a href="#"><i class="fab fa-github"></i></a></li>
-                    </ul>
-                  </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; Gema Adame Prudencio
+            <a href="#">Minsait</a>.
+          </p>
+        </div>
+        <div class="footer-area-bottom">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="footer-icons">
+                  <ul>
+                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fab fa-codepen"></i></a></li>
+                    <li><a href="#"><i class="fab fa-github"></i></a></li>
+                  </ul>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12">
-        </div>
-      </div>
-</footer>
-    </footer>
-  </body>
-  <script src="./index.js"></script>
-  <script src="./list.js"></script>
-  <script src="./details.js"></script>
+            </div>
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+              </div>
+            </div>
+  </footer>
+</body>
+
 </html>
