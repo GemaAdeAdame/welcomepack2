@@ -8,29 +8,29 @@ fetch(apiURL)
 document.addEventListener("DOMContentLoaded", function () {
   const pokemonListContainer = document.getElementById("pokemon-list");
 
-  async function obtenerListaPokemon() {
+  async function getListPokemon() {
     try {
       const response = await fetch(
         "https://pokeapi.co/api/v2/pokemon?limit=1000"
       );
       if (!response.ok) {
-        throw new Error("No se pudo obtener la lista de Pokémon.");
+        throw new Error("No se pudo obtener la list de Pokémon.");
       }
 
       const data = await response.json();
       const pokemonList = data.results;
 
-      const mostrarDetallesButton = document.createElement("button");
-      mostrarDetallesButton.textContent = "Mostrar Detalles";
+      constshowButtonDetails = document.createElement("button");
+      showButtonDetails.textContent = "Mostrar Detalles";
       pokemonListContainer.appendChild(mostrarDetallesButton);
 
-      mostrarDetallesButton.addEventListener("click", function () {
-        mostrarBotonesPokemon(pokemonList);
+      showButtonDetails.addEventListener("click", function () {
+        showButtonsPokemon(pokemonList);
       });
     } catch (error) {}
   }
 
-  function mostrarBotonesPokemon(pokemonList) {
+  function showButtonsPokemon(pokemonList) {
     pokemonListContainer.innerHTML = "";
 
     pokemonList.forEach((pokemon, index) => {
@@ -44,5 +44,5 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  obtenerListaPokemon();
+  getListPokemon();
 });
