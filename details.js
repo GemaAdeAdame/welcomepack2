@@ -1,4 +1,4 @@
-constshowDetails = async (url) => {
+const showDetails = async (url) => {
   const response = await fetch(url);
   if (!response.ok) {
     throw new Error("No se pudo obtener la información del Pokémon.");
